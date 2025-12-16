@@ -6,7 +6,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 * {
   box-sizing: border-box;
 }
@@ -83,6 +82,36 @@ body {
 
 .nav-links a:hover::after {
   width: 100%;
+}
+
+/* Botão hamburguer - escondido no desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* Barrinhas do ícone */
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 4px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animação X quando aberto */
+.menu-toggle.is-open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.menu-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.is-open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 main {
@@ -429,9 +458,34 @@ main {
 
 /* Até 768px (tablet e mobile em landscape) */
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
   /* menu desktop some (futuro hamburger) */
   .nav-links {
     display: none;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px; /* altura do header */
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 24px 24px;
+    background-color: rgba(0, 0, 0, 0.96);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: none; /* fechado por padrão */
+  }
+
+  /* quando abre (classe adicionada via JS) */
+  .nav-links.nav-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 14px;
   }
 
   /* hero: tipografia e alinhamento */
