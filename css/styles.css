@@ -280,14 +280,107 @@ main {
   margin: 0;
 }
 
-/* Responsivo */
+/* =========================
+   Seção Eventos
+========================= */
 
-@media (max-width: 768px) {
-  .integrantes-grid {
-    grid-template-columns: 1fr;
-  }
+.section-eventos {
+  padding: 60px 0;
 }
 
+.eventos-title {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+/* layout em 2 colunas */
+.evento {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 56px;
+}
+
+/* esquerda: nome + cartaz */
+.evento-left {
+  flex: 1;
+}
+
+.evento-nome-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 16px 24px;
+  margin-bottom: 24px;
+}
+
+.evento-nome-box .bullet {
+  font-size: 32px;
+  color: #ffffff;
+}
+
+.evento-nome {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.evento-poster {
+  max-width: 380px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.evento-poster img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* direita: bloco de texto preto */
+.evento-right {
+  flex: 1.2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.evento-text-box {
+  background-color: #000000;
+  padding: 24px 28px;
+  max-width: 520px;
+  color: #ffffff;
+}
+
+.evento-text-box p {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  margin: 0 0 12px 0;
+}
+
+.evento-text-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* Inverter layout apenas do segundo evento (Sul Cypher) */
+.section-eventos .evento:nth-of-type(2) {
+  flex-direction: row-reverse; /* imagem à direita, texto à esquerda */
+}
+
+.section-eventos .evento:nth-of-type(2) .evento-right {
+  justify-content: flex-start; /* texto encosta mais na esquerda */
+}
+
+/* Aumentar o cartaz do segundo evento (Sul Cypher) */
+.section-eventos .evento:nth-of-type(2) .evento-poster {
+  max-width: 460px; /* era 380px; ajuste se quiser ainda maior */
+}
 
 /* =========================
    Footer
@@ -347,8 +440,28 @@ main {
   }
 }
 
+/* Responsivo - Integrantes */
 @media (max-width: 768px) {
   .integrantes-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Responsivo - Eventos */
+@media (max-width: 768px) {
+  .evento {
+    flex-direction: column; /* sobrescreve qualquer row-reverse em mobile */
+  }
+
+  .evento-right {
+    justify-content: flex-start;
+  }
+
+  .evento-poster {
+    max-width: 100%;
+  }
+
+  .evento-text-box {
+    max-width: 100%;
   }
 }
