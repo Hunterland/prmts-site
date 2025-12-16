@@ -114,21 +114,44 @@ main {
   align-items: center;
   justify-content: flex-end;
 
-  /* imagem específica do hero */
-  background-image: url("../assets/images/home/bg_home.png");
+  /* imagem específica do hero com overlay escuro */
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../assets/images/home/img_bf.jpg");
   background-size: cover;
-  background-position: right center; /* garante foco do lado direito */
+  background-position: right center;
   background-repeat: no-repeat;
 }
 
+
 .hero h1 {
-  color: #ffffff;
+  color: #d6d26a; /* variação mais clara do #6a6931 */
   font-size: 48px;
   font-style: italic;
   letter-spacing: 4px;
   text-transform: uppercase;
-  margin: 0 48px 0 0; /* encosta na direita com respiro */
+  margin: 0 0 8px 0;   /* margem só embaixo para colar o subtitle */
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+
+  /* destaque da frase sobre o fundo escuro */
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
 }
+
+.hero-content {
+  margin-right: 48px;
+  text-align: right;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0.85;
+  margin: 0;           /* garante que grude logo abaixo */
+}
+
 
 /* =========================
    Seção Sobre
