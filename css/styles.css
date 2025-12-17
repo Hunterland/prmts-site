@@ -115,7 +115,7 @@ body {
 }
 
 main {
-  padding-top: 72px; /* compensa o header fixo */
+  padding-top: 72px;
 }
 
 /* =========================
@@ -146,8 +146,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
-  /* imagem específica do hero com overlay escuro */
   background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
     url("../assets/images/home/img_bf.jpg");
   background-size: cover;
@@ -161,7 +159,7 @@ main {
 }
 
 .hero h1 {
-  color: #d6d26a; /* variação mais clara do #6a6931 */
+  color: #d6d26a;
   font-size: 48px;
   font-style: italic;
   letter-spacing: 4px;
@@ -276,7 +274,7 @@ main {
   color: #ffffff;
 }
 
-/* Topo do card: foto + infos lado a lado */
+/* Topo do card */
 
 .integrante-header {
   display: flex;
@@ -285,7 +283,7 @@ main {
   margin-bottom: 12px;
 }
 
-/* Bloco da foto */
+/* Foto */
 
 .integrante-foto {
   width: 72px;
@@ -303,7 +301,7 @@ main {
   display: block;
 }
 
-/* Textos do cabeçalho */
+/* Textos */
 
 .integrante-info {
   flex: 1;
@@ -322,8 +320,6 @@ main {
   color: #f5b55f;
   margin: 0;
 }
-
-/* Bio */
 
 .integrante-bio {
   font-size: 14px;
@@ -347,16 +343,12 @@ main {
   margin-bottom: 40px;
 }
 
-/* layout em 2 colunas */
-
 .evento {
   display: flex;
   gap: 40px;
   align-items: flex-start;
   margin-bottom: 56px;
 }
-
-/* esquerda: nome + cartaz */
 
 .evento-left {
   flex: 1;
@@ -395,8 +387,6 @@ main {
   object-fit: cover;
 }
 
-/* direita: bloco de texto preto */
-
 .evento-right {
   flex: 1.2;
   display: flex;
@@ -422,7 +412,7 @@ main {
   margin-bottom: 0;
 }
 
-/* Inverter layout apenas do segundo evento (Sul Cypher) em desktop */
+/* Sul Cypher em desktop */
 
 .section-eventos .evento:nth-of-type(2) {
   flex-direction: row-reverse;
@@ -431,8 +421,6 @@ main {
 .section-eventos .evento:nth-of-type(2) .evento-right {
   justify-content: flex-start;
 }
-
-/* Aumentar o cartaz do segundo evento (Sul Cypher) */
 
 .section-eventos .evento:nth-of-type(2) .evento-poster {
   max-width: 460px;
@@ -456,19 +444,16 @@ main {
    Responsividade
 ========================= */
 
-/* Até 768px (tablet e mobile em landscape) */
+/* Até 768px (tablet e mobile) */
 @media (max-width: 768px) {
+  /* menu mobile */
   .menu-toggle {
     display: block;
-  }
-  /* menu desktop some (futuro hamburger) */
-  .nav-links {
-    display: none;
   }
 
   .nav-links {
     position: absolute;
-    top: 80px; /* altura do header */
+    top: 80px;
     right: 0;
     left: 0;
     flex-direction: column;
@@ -476,10 +461,9 @@ main {
     padding: 16px 24px 24px;
     background-color: rgba(0, 0, 0, 0.96);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    display: none; /* fechado por padrão */
+    display: none;
   }
 
-  /* quando abre (classe adicionada via JS) */
   .nav-links.nav-open {
     display: flex;
   }
@@ -488,7 +472,7 @@ main {
     font-size: 14px;
   }
 
-  /* hero: tipografia e alinhamento */
+  /* hero */
   .hero h1 {
     font-size: 32px;
     letter-spacing: 2px;
@@ -503,7 +487,7 @@ main {
     margin-right: 24px;
   }
 
-  /* sobre empilha colunas */
+  /* sobre */
   .sobre-wrapper {
     flex-direction: column;
     gap: 24px;
@@ -526,7 +510,7 @@ main {
     height: auto;
   }
 
-  /* integrantes em 1 coluna, com texto mais leve */
+  /* integrantes */
   .integrantes-grid {
     grid-template-columns: 1fr;
   }
@@ -543,13 +527,13 @@ main {
     font-size: 13px;
   }
 
-  /* eventos em coluna única */
+  /* eventos */
   .section-eventos {
     padding: 40px 0;
   }
 
   .evento {
-    flex-direction: column; /* sobrescreve row-reverse */
+    flex-direction: column;
     gap: 20px;
     margin-bottom: 40px;
   }
@@ -564,7 +548,7 @@ main {
   }
 }
 
-/* Até 480px (mobile) */
+/* Até 480px (mobile 412x914, etc.) */
 @media (max-width: 480px) {
   .menu {
     height: 60px;
@@ -583,10 +567,18 @@ main {
 
   .hero-content {
     margin-right: 16px;
+    margin-left: 16px;
+    text-align: center;
   }
 
   .hero h1 {
-    font-size: 26px;
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  .hero-subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
   }
 
   .container {
@@ -595,5 +587,59 @@ main {
 
   .section {
     padding: 32px 0;
+  }
+
+  /* sobre mais compacto */
+  .sobre-box {
+    padding: 16px 18px;
+  }
+
+  .sobre-box p {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .sobre-title {
+    font-size: 32px;
+  }
+
+  /* integrantes mais leves */
+  .integrante-card {
+    padding: 14px 16px;
+  }
+
+  .integrante-nome {
+    font-size: 15px;
+  }
+
+  .integrante-bio {
+    font-size: 12px;
+  }
+
+  .integrante-header {
+    align-items: flex-start;
+  }
+
+  /* eventos mais compactos */
+  .section-eventos {
+    padding: 32px 0;
+  }
+
+  .evento {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .evento-nome-box {
+    padding: 12px 16px;
+  }
+
+  .evento-text-box {
+    padding: 16px 18px;
+  }
+
+  .evento-text-box p {
+    font-size: 12px;
+    letter-spacing: 0.5px;
   }
 }
