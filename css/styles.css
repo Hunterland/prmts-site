@@ -675,9 +675,23 @@ main {
 
 .footer {
   background-color: #000000;
-  padding: 40px 24px;
+  padding: 24px 6%;
   text-align: center;
   color: #ffffff;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer p {
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.5px;
 }
 
 /* =======================================================
@@ -761,6 +775,7 @@ main {
     justify-content: center; /* Centraliza texto no mobile */
   }
 
+  /* Contato */
   .contato-titulo {
     font-size: 48px;
   }
@@ -768,6 +783,17 @@ main {
   .apoio-card {
     width: 180px;
     height: 180px;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .footer p {
+    font-size: 13px;
   }
 }
 
