@@ -1,32 +1,37 @@
-/* =========================
-   Base / Reset
-========================= */
+/* =======================================================
+   BASE / RESET GERAL
+   ======================================================= */
 
+/* Comportamento de rolagem suave em ancoragens */
 html {
   scroll-behavior: smooth;
 }
 
+/* Padroniza cálculo de tamanhos de elementos */
 * {
   box-sizing: border-box;
 }
 
+/* Configurações básicas do body */
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
   min-height: 100vh;
-  background: #000;  /* fundo preto como fallback */
+  /* Fundo preto como fallback (caso imagens de fundo falhem) */
+  background: #000000;
 }
 
+/* Contêiner centralizado e com limite de largura */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* =========================
-   Header / Navegação
-========================= */
+/* =======================================================
+   HEADER / NAVEGAÇÃO
+   ======================================================= */
 
 .header {
   position: fixed;
@@ -38,6 +43,7 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* Área interna do menu */
 .menu {
   display: flex;
   align-items: center;
@@ -45,11 +51,13 @@ body {
   height: 80px;
 }
 
+/* Logo principal */
 .logo img {
   height: 60px;
   object-fit: contain;
 }
 
+/* Lista de links da navegação */
 .nav-links {
   display: flex;
   gap: 32px;
@@ -58,8 +66,8 @@ body {
   padding: 0;
 }
 
+/* Estilo dos links */
 .nav-links a {
-  font-family: var(--font-text);
   font-size: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -69,6 +77,7 @@ body {
   padding-bottom: 4px;
 }
 
+/* Efeito underline animado */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -84,7 +93,9 @@ body {
   width: 100%;
 }
 
-/* Botão hamburguer - escondido no desktop */
+/* =======================================================
+   BOTÃO MENU MOBILE (hambúrguer)
+   ======================================================= */
 
 .menu-toggle {
   display: none;
@@ -94,6 +105,7 @@ body {
   padding: 8px;
 }
 
+/* Linhas do ícone */
 .menu-toggle span {
   display: block;
   width: 22px;
@@ -103,6 +115,7 @@ body {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Estados de abertura do ícone (animação X) */
 .menu-toggle.is-open span:nth-child(1) {
   transform: translateY(6px) rotate(45deg);
 }
@@ -113,13 +126,14 @@ body {
   transform: translateY(-6px) rotate(-45deg);
 }
 
+/* Espaçamento do conteúdo principal abaixo do header fixo */
 main {
   padding-top: 72px;
 }
 
-/* =========================
-   Seções genéricas
-========================= */
+/* =======================================================
+   SEÇÕES GENÉRICAS
+   ======================================================= */
 
 .section {
   position: relative;
@@ -131,14 +145,15 @@ main {
   margin: 0;
 }
 
+/* Remove margens extras em títulos */
 .section h1,
 .section h2 {
   margin-top: 0;
 }
 
-/* =========================
-   Home / Hero
-========================= */
+/* =======================================================
+   HOME / HERO SECTION
+   ======================================================= */
 
 .hero {
   position: relative;
@@ -150,20 +165,21 @@ main {
 }
 
 .hero video {
-  will-change: transform;  /* otimiza performance */
+  will-change: transform; /* otimização de desempenho */
 }
 
-
+/* Conteúdo sobreposto ao vídeo */
 .hero-content {
   position: relative;
-  z-index: 2; /* sempre em cima do vídeo */
+  z-index: 2;
   margin-right: 48px;
   text-align: right;
-  background: rgba(0, 0, 0, 0.5); /* overlay escuro para legibilidade */
+  background: rgba(0, 0, 0, 0.5);
   padding: 32px 40px;
   border-radius: 12px;
 }
 
+/* Container do vídeo de fundo */
 .video-bg {
   position: absolute;
   top: 0;
@@ -181,6 +197,7 @@ main {
   display: block;
 }
 
+/* Título principal */
 .hero h1 {
   color: #d6d26a;
   font-size: 48px;
@@ -193,18 +210,18 @@ main {
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
 }
 
+/* Subtítulo */
 .hero-subtitle {
   font-size: 16px;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #ffffff;
   opacity: 0.85;
-  margin: 0;
 }
 
-/* =========================
-   Seção Sobre
-========================= */
+/* =======================================================
+   SEÇÃO SOBRE
+   ======================================================= */
 
 .sobre-wrapper {
   display: flex;
@@ -212,13 +229,13 @@ main {
   gap: 40px;
 }
 
+/* Coluna texto */
 .sobre-left {
   flex: 1.1;
 }
 
 .sobre-title {
   font-size: 40px;
-  line-height: 1;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -227,6 +244,7 @@ main {
   font-style: italic;
 }
 
+/* Caixa preta do texto */
 .sobre-box {
   background-color: #000000;
   padding: 24px 28px;
@@ -246,6 +264,7 @@ main {
   margin-bottom: 0;
 }
 
+/* Coluna imagem */
 .sobre-right {
   flex: 1;
   display: flex;
@@ -253,22 +272,20 @@ main {
 }
 
 .sobre-photo {
-  max-width: 100%;
   width: 100%;
-  height: 100%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 .sobre-photo img {
   width: 100%;
   height: 100%;
-  display: block;
   object-fit: cover;
+  display: block;
 }
 
-/* =========================
-   Seção Integrantes
-========================= */
+/* =======================================================
+   SEÇÃO INTEGRANTES
+   ======================================================= */
 
 .section-integrantes {
   padding: 60px 0;
@@ -276,8 +293,6 @@ main {
 
 .integrantes-title {
   font-size: 40px;
-  line-height: 1;
-  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 4px;
   margin: 0 0 24px 0;
@@ -291,8 +306,7 @@ main {
   gap: 32px 40px;
 }
 
-/* Card geral */
-
+/* Cartão individual */
 .integrante-card {
   background: rgba(0, 0, 0, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -307,6 +321,7 @@ main {
   margin-bottom: 12px;
 }
 
+/* Foto circular */
 .integrante-foto {
   width: 72px;
   height: 72px;
@@ -320,13 +335,9 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
-.integrante-info {
-  flex: 1;
-}
-
+/* Nome + apelido */
 .integrante-nome {
   font-size: 18px;
   text-transform: uppercase;
@@ -338,18 +349,16 @@ main {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #f5b55f;
-  margin: 0;
 }
 
 .integrante-bio {
   font-size: 14px;
   line-height: 1.6;
-  margin: 0;
 }
 
-/* =========================
-   Seção Eventos
-========================= */
+/* =======================================================
+   SEÇÃO EVENTOS
+   ======================================================= */
 
 .section-eventos {
   padding: 60px 0;
@@ -357,15 +366,14 @@ main {
 
 .eventos-title {
   font-size: 40px;
-  line-height: 1;
-  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin: 0 0 24px 0;
   color: #ffffff;
   font-style: italic;
+  margin-bottom: 24px;
 }
 
+/* Layout flexível de cada evento */
 .evento {
   display: flex;
   gap: 40px;
@@ -373,6 +381,7 @@ main {
   margin-bottom: 56px;
 }
 
+/* Nome + cartaz */
 .evento-left {
   flex: 1;
 }
@@ -398,6 +407,7 @@ main {
   text-transform: capitalize;
 }
 
+/* Cartaz */
 .evento-poster {
   max-width: 380px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
@@ -405,11 +415,10 @@ main {
 
 .evento-poster img {
   width: 100%;
-  height: auto;
-  display: block;
   object-fit: cover;
 }
 
+/* Descrição */
 .evento-right {
   flex: 1.2;
   display: flex;
@@ -435,8 +444,7 @@ main {
   margin-bottom: 0;
 }
 
-/* Sul Cypher em desktop */
-
+/* Evento alternado (Sul Cypher) */
 .section-eventos .evento:nth-of-type(2) {
   flex-direction: row-reverse;
 }
@@ -449,9 +457,9 @@ main {
   max-width: 460px;
 }
 
-/* =========================
-   Seção Mídia / Carrossel
-========================= */
+/* =======================================================
+   SEÇÃO MÍDIA / CARROSSEL
+   ======================================================= */
 
 .section-midia {
   padding: 60px 0;
@@ -459,15 +467,14 @@ main {
 
 .midia-title {
   font-size: 40px;
-  line-height: 1;
-  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin: 0 0 24px 0;
   color: #ffffff;
   font-style: italic;
+  margin-bottom: 24px;
 }
 
+/* Container do carrossel */
 .midia-carousel {
   position: relative;
   display: flex;
@@ -475,61 +482,56 @@ main {
   gap: 16px;
 }
 
-/* área que "mascara" o carrossel */
+/* Área que recorta slides */
 .midia-track-wrapper {
   overflow: hidden;
   flex: 1;
 }
 
-/* faixa deslizante */
+/* Faixa deslizante */
 .midia-track {
   display: flex;
   transition: transform 0.4s ease;
 }
 
-/* cada slide com proporção fixa */
+/* Slides */
 .midia-slide {
   position: relative;
   min-width: 100%;
-  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #ffffff;
   background-color: #111111;
-  aspect-ratio: 16 / 9; /* garante padrão visual */
+  aspect-ratio: 16 / 9;
 }
 
 .midia-slide img {
   width: 100%;
   height: 100%;
-  display: block;
-  object-fit: contain; /* mostra a imagem inteira, sem corte */
+  object-fit: contain;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
-/* título e descrição em overlay na parte de baixo */
+/* Título e descrição sobrepostos */
 .midia-slide-title {
   position: absolute;
   left: 32px;
   bottom: 72px;
-  margin: 0;
   font-size: 18px;
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .midia-slide-desc {
   position: absolute;
   left: 32px;
   bottom: 24px;
-  margin: 0;
   font-size: 14px;
   line-height: 1.6;
   max-width: 480px;
 }
 
-/* setas */
-
+/* Setas laterais */
 .midia-arrow {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -549,8 +551,7 @@ main {
   border-color: #ffffff;
 }
 
-/* bolinhas de navegação */
-
+/* Bolinhas indicadoras */
 .midia-dots {
   display: flex;
   justify-content: center;
@@ -573,91 +574,24 @@ main {
   transform: scale(1.3);
 }
 
-/* =========================
-   Responsividade - Mídia
-========================= */
-
-/* até 768px (tablet) */
-@media (max-width: 768px) {
-  .section-midia {
-    padding: 40px 0;
-  }
-
-  .midia-title {
-    font-size: 26px;
-    margin-bottom: 24px;
-  }
-
-  .midia-arrow {
-    width: 30px;
-    height: 30px;
-  }
-
-  .midia-slide {
-    aspect-ratio: 16 / 10; /* um pouco mais alta para telas menores */
-  }
-
-  .midia-slide-title {
-    left: 20px;
-    bottom: 64px;
-    font-size: 16px;
-  }
-
-  .midia-slide-desc {
-    left: 20px;
-    bottom: 20px;
-    font-size: 13px;
-    max-width: 380px;
-  }
-}
-
-/* até 480px (mobile 412x914 etc.) */
-@media (max-width: 480px) {
-  .midia-carousel {
-    gap: 8px;
-  }
-
-  .midia-slide {
-    aspect-ratio: 16 / 12; /* ainda mais alta, cabendo melhor na tela */
-  }
-
-  .midia-slide-title {
-    left: 16px;
-    bottom: 60px;
-    font-size: 14px;
-    font-weight: bold;
-  }
-
-  .midia-slide-desc {
-    left: 16px;
-    bottom: 16px;
-    font-size: 12px;
-    max-width: calc(100% - 32px);
-  }
-}
-
-/* =========================
-   Footer
-========================= */
+/* =======================================================
+   FOOTER
+   ======================================================= */
 
 .footer {
   background-color: #000000;
   padding: 40px 24px;
   text-align: center;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
   color: #ffffff;
 }
 
-/* =========================
-   Responsividade
-========================= */
+/* =======================================================
+   RESPONSIVIDADE (media queries)
+   ======================================================= */
 
-/* Até 768px (tablet e mobile) */
-
+/* ---------- até 768px (tablet) ---------- */
 @media (max-width: 768px) {
-  /* menu mobile */
+  /* Menu mobile ativo */
   .menu-toggle {
     display: block;
   }
@@ -665,8 +599,8 @@ main {
   .nav-links {
     position: absolute;
     top: 60px;
-    right: 0;
     left: 0;
+    right: 0;
     flex-direction: column;
     gap: 16px;
     padding: 16px 24px 24px;
@@ -674,185 +608,132 @@ main {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     display: none;
   }
-
   .nav-links.nav-open {
     display: flex;
   }
 
-  .nav-links a {
-    font-size: 14px;
-  }
-
-  /* hero */
+  /* Hero */
   .hero h1 {
     font-size: 32px;
-    letter-spacing: 2px;
   }
-
   .hero-subtitle {
     font-size: 12px;
-    letter-spacing: 2px;
   }
-
   .hero-content {
     margin-right: 24px;
   }
 
-  /* sobre */
+  /* Sobre */
   .sobre-wrapper {
     flex-direction: column;
     gap: 24px;
   }
-
   .sobre-right {
     justify-content: flex-start;
   }
-
-  .sobre-box {
-    max-width: 100%;
-  }
-
+  .sobre-box,
   .sobre-photo {
     max-width: 100%;
-    height: auto;
   }
 
-  .sobre-photo img {
-    height: auto;
-  }
-
-  /* integrantes */
+  /* Integrantes */
   .integrantes-grid {
     grid-template-columns: 1fr;
   }
-
   .integrante-card {
     padding: 16px 18px;
   }
 
-  .integrante-nome {
-    font-size: 16px;
-  }
-
-  .integrante-bio {
-    font-size: 13px;
-  }
-
-  /* eventos */
-  .section-eventos {
-    padding: 40px 0;
-  }
-
+  /* Eventos empilhados */
   .evento {
     flex-direction: column;
     gap: 20px;
     margin-bottom: 40px;
   }
-
-  .evento-nome-box {
-    width: 100%;
-  }
-
   .evento-poster,
   .evento-text-box {
     max-width: 100%;
   }
+
+  .evento,
+  .evento-reverse {
+    /* ← IMPORTANTE: inclui .evento-reverse */
+    flex-direction: column !important;
+    gap: 20px;
+  }
+
+  .evento-reverse .evento-right {
+    justify-content: center; /* Centraliza texto no mobile */
+  }
 }
 
-/* Até 480px (mobile 412x914, etc.) */
-
+/* ---------- até 480px (mobile) ---------- */
 @media (max-width: 480px) {
   .menu {
     height: 60px;
   }
-
   .logo img {
     height: 36px;
   }
 
+  /* Hero centralizado */
   .hero {
     min-height: 60vh;
     justify-content: center;
     text-align: center;
-    background-position: center top;
   }
-
   .hero-content {
-    margin-right: 16px;
-    margin-left: 16px;
+    margin: 0 16px;
     text-align: center;
   }
-
   .hero h1 {
     font-size: 24px;
-    letter-spacing: 2px;
   }
-
   .hero-subtitle {
     font-size: 12px;
-    letter-spacing: 2px;
   }
 
   .container {
     padding: 0 16px;
   }
-
   .section {
     padding: 32px 0;
   }
 
-  /* sobre mais compacto */
+  /* Texto sobre mais compacto */
   .sobre-box {
     padding: 16px 18px;
   }
-
   .sobre-box p {
     font-size: 12px;
-    letter-spacing: 0.5px;
   }
-
   .sobre-title {
     font-size: 32px;
   }
 
-  /* integrantes mais leves */
+  /* Integrantes */
   .integrante-card {
     padding: 14px 16px;
   }
-
   .integrante-nome {
     font-size: 15px;
   }
-
   .integrante-bio {
     font-size: 12px;
   }
 
-  .integrante-header {
-    align-items: flex-start;
-  }
-
-  /* eventos mais compactos */
-  .section-eventos {
-    padding: 32px 0;
-  }
-
+  /* Eventos */
   .evento {
     gap: 16px;
     margin-bottom: 32px;
   }
-
   .evento-nome-box {
     padding: 12px 16px;
   }
-
   .evento-text-box {
     padding: 16px 18px;
   }
-
   .evento-text-box p {
     font-size: 12px;
-    letter-spacing: 0.5px;
   }
 }
-
