@@ -32,7 +32,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.96);
   backdrop-filter: blur(6px);
   z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -148,6 +148,11 @@ main {
   justify-content: flex-end;
   overflow: hidden;
 }
+
+.hero video {
+  will-change: transform;  /* otimiza performance */
+}
+
 
 .hero-content {
   position: relative;
@@ -850,3 +855,4 @@ main {
     letter-spacing: 0.5px;
   }
 }
+

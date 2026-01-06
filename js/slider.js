@@ -40,3 +40,5 @@ window.addEventListener("resize", () => updateCarousel(currentIndex));
 
 // inicializa
 updateCarousel(currentIndex);
+
+
