@@ -67,13 +67,28 @@
          Conteúdo principal
     ======================== -->
     <main>
-      <!-- Home / Hero -->
+      <!-- Home / Hero - APENAS VÍDEO + TEXTO -->
       <section id="home" class="section hero">
+        <!-- Vídeo de fundo -->
+        <div class="video-bg">
+          <video 
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            preload="auto">
+            <source src="assets/video/prmts_cypher.mp4" type="video/mp4">
+            <!-- Sem imagem de fallback - só vídeo -->
+          </video>
+        </div>
+        
+        <!-- Seu conteúdo em cima -->
         <div class="hero-content">
           <h1>Uma Década de Asfalto, Suor e Impacto.</h1>
           <p class="hero-subtitle">Since 2014</p>
         </div>
       </section>
+
 
       <!-- Seção Sobre -->
       <section id="sobre" class="section section-sobre">

@@ -1,20 +1,3 @@
-// --- Menu Mobile --->
- 
-if (toggle && nav) {
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("nav-open");
-    toggle.classList.toggle("is-open");
-  });
-
-  // fecha menu ao clicar em um link
-  nav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("nav-open");
-      toggle.classList.remove("is-open");
-    });
-  });
-}
-
 // --- Carrossel Presença Midiática ---
 const track = document.querySelector(".midia-track");
 const slides = document.querySelectorAll(".midia-slide");
