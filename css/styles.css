@@ -13,9 +13,9 @@ html {
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background-color: var(--color-background);
-  color: var(--color-text);
   line-height: 1.6;
+  min-height: 100vh;
+  background: #000;  /* fundo preto como fallback */
 }
 
 .container {
@@ -212,7 +212,7 @@ main {
 }
 
 .sobre-title {
-  font-size: 56px;
+  font-size: 40px;
   line-height: 1;
   font-weight: bold;
   text-transform: uppercase;
@@ -269,12 +269,15 @@ main {
   padding: 60px 0;
 }
 
-.section-integrantes h2 {
-  color: #ffffff;
+.integrantes-title {
+  font-size: 40px;
+  line-height: 1;
+  font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 32px;
-  margin-bottom: 40px;
+  letter-spacing: 4px;
+  margin: 0 0 24px 0;
+  color: #ffffff;
+  font-style: italic;
 }
 
 .integrantes-grid {
@@ -348,11 +351,14 @@ main {
 }
 
 .eventos-title {
-  color: #ffffff;
+  font-size: 40px;
+  line-height: 1;
+  font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 36px;
-  margin-bottom: 40px;
+  letter-spacing: 4px;
+  margin: 0 0 24px 0;
+  color: #ffffff;
+  font-style: italic;
 }
 
 .evento {
@@ -447,11 +453,14 @@ main {
 }
 
 .midia-title {
-  color: #ffffff;
+  font-size: 40px;
+  line-height: 1;
+  font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 32px;
-  margin-bottom: 32px;
+  letter-spacing: 4px;
+  margin: 0 0 24px 0;
+  color: #ffffff;
+  font-style: italic;
 }
 
 .midia-carousel {
