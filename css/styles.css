@@ -145,6 +145,34 @@ main {
   margin: 0;
 }
 
+/* =======================================================
+   OVERLAY ESCURO PARA SEÇÕES COM IMAGEM DE FUNDO
+   ======================================================= */
+
+.section,
+.contato-section,
+.hero {
+  position: relative;
+}
+
+.section::before,
+.contato-section::before,
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* controle da escuridão */
+  z-index: 1;
+}
+
+/* Garante que o conteúdo fique acima do overlay */
+.section > *,
+.contato-section > *,
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
 /* Remove margens extras em títulos */
 .section h1,
 .section h2 {
@@ -199,13 +227,13 @@ main {
 
 /* Título principal */
 .hero h1 {
-  color: #d6d26a;
-  font-size: 48px;
+  color: #f5b55f;
+  font-size: 35px;
   font-style: italic;
   letter-spacing: 4px;
   text-transform: uppercase;
   margin: 0 0 8px 0;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
 }
@@ -323,11 +351,11 @@ main {
 
 /* Foto circular */
 .integrante-foto {
-  width: 72px;
-  height: 72px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid #f5b55f;
+  border: 3px solid #f5b55f;
   flex-shrink: 0;
 }
 
@@ -335,17 +363,18 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
 
 /* Nome + apelido */
 .integrante-nome {
-  font-size: 18px;
+  font-size: 22px;
   text-transform: uppercase;
   margin: 0 0 2px 0;
 }
 
 .integrante-apelido {
-  font-size: 12px;
+  font-size: 22px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #f5b55f;
@@ -506,11 +535,21 @@ main {
   aspect-ratio: 16 / 9;
 }
 
+.midia-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+  pointer-events: none;
+}
+
 .midia-slide img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  z-index: 0;
 }
 
 /* Título e descrição sobrepostos */
@@ -522,6 +561,10 @@ main {
   text-transform: uppercase;
 }
 
+.midia-slide-title {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85), 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
 .midia-slide-desc {
   position: absolute;
   left: 32px;
@@ -529,6 +572,15 @@ main {
   font-size: 14px;
   line-height: 1.6;
   max-width: 480px;
+}
+
+.midia-slide-desc {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85), 0 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+.midia-slide-title,
+.midia-slide-desc {
+  z-index: 2;
 }
 
 /* Setas laterais */
@@ -602,7 +654,8 @@ main {
 .contato-titulo {
   font-family: "Poppins", sans-serif;
   font-style: italic;
-  font-size: 64px;
+  text-transform: uppercase;
+  font-size: 50px;
   color: #fff;
   margin-bottom: 0px;
 }
@@ -680,11 +733,8 @@ main {
   color: #ffffff;
 }
 
-.footer-container {
-  display: flex;
-  justify-content: space-between;
+.footer-copy {
   align-items: center;
-  gap: 16px;
 }
 
 .footer p {
@@ -692,6 +742,13 @@ main {
   color: #fff;
   font-size: 14px;
   letter-spacing: 0.5px;
+}
+
+/* =======================================================
+   DESTAQUE VISUAL PARA TÍTULOS DE SEÇÃO (H2)
+   ======================================================= */
+section h2 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85), 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 /* =======================================================
@@ -892,6 +949,19 @@ main {
 }
 
 @media (max-width: 480px) {
+
+  .midia-slide::before {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .midia-slide-title {
+    font-size: 16px;
+  }
+
+  .midia-slide-desc {
+    font-size: 13px;
+  }
+
   .contato-section {
     padding: 60px 5%;
   }
@@ -923,5 +993,9 @@ main {
   .apoio-card {
     width: 150px;
     height: 150px;
+  }
+
+  .footer p {
+    font-size: 12px;
   }
 }
