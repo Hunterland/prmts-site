@@ -575,6 +575,101 @@ main {
 }
 
 /* =======================================================
+   CONTATO
+   ======================================================= */
+
+.contato-section {
+  padding: 80px 6%;
+  background-image: url("../assets/images/contato/bg-contato.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Remove sublinhado dos links da seção de contato */
+.contato-section a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contato-container {
+  display: grid;
+  grid-template-columns: 2fr 1.3fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.contato-titulo {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-size: 64px;
+  color: #fff;
+  margin-bottom: 0px;
+}
+
+.contato-titulo.apoio {
+  color: #ffffff;
+}
+
+.contato-apoio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.apoio-card {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.apoio-card img {
+  max-width: 75%;
+  border-radius: 50%;
+}
+
+.apoio-instagram {
+  background: #000;
+  color: #fff !important;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.contato-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contato-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #000;
+  padding: 14px 20px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.contato-item i {
+  font-size: 28px;
+  color: #fff;
+}
+
+.contato-item span {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* =======================================================
    FOOTER
    ======================================================= */
 
@@ -665,6 +760,15 @@ main {
   .evento-reverse .evento-right {
     justify-content: center; /* Centraliza texto no mobile */
   }
+
+  .contato-titulo {
+    font-size: 48px;
+  }
+
+  .apoio-card {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 /* ---------- até 480px (mobile) ---------- */
@@ -735,5 +839,63 @@ main {
   }
   .evento-text-box p {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contato-container {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contato-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+
+  .contato-info {
+    align-items: center;
+  }
+
+  .contato-item {
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contato-section {
+    padding: 60px 5%;
+  }
+
+  .contato-titulo {
+    font-size: 40px;
+  }
+
+  .contato-item {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .contato-item i {
+    font-size: 22px;
+  }
+
+  .apoio-instagram {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .contato-titulo {
+    font-size: 34px;
+  }
+
+  .apoio-card {
+    width: 150px;
+    height: 150px;
   }
 }
