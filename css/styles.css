@@ -259,7 +259,7 @@ main {
 
 /* Coluna texto */
 .sobre-left {
-  flex: 1.1;
+  flex: 1;
 }
 
 .sobre-title {
@@ -276,7 +276,7 @@ main {
 .sobre-box {
   background-color: #000000;
   padding: 24px 28px;
-  max-width: 520px;
+  max-width: 581px;
 }
 
 .sobre-box p {
@@ -285,7 +285,6 @@ main {
   letter-spacing: 1px;
   margin: 0 0 12px 0;
   color: #ffffff;
-  font-weight: bold;
 }
 
 .sobre-box p:last-child {
@@ -301,6 +300,7 @@ main {
 
 .sobre-photo {
   width: 100%;
+  height: 500px; /* AUMENTA para mostrar grupo completo */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
@@ -308,7 +308,56 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   display: block;
+}
+
+/* Missão, Visão e Valores */
+.sobre-mvv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.sobre-mvv-item {
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 14px; /* REDUZ padding */
+  height: 140px; /* Altura fixa compacta */
+  display: flex;
+  flex-direction: column;
+}
+
+.sobre-mvv-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #f5b55f;
+  margin: 0 0 6px;
+  font-style: italic;
+  flex-shrink: 0;
+}
+
+.sobre-mvv-item p,
+.sobre-mvv-list li {
+  font-size: 12px; /* Fonte menor para texto */
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+  text-transform: none;
+  margin: 0;
+  overflow: hidden; /* Evita overflow */
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Limita a 4 linhas */
+  -webkit-box-orient: vertical;
+  color: #ffffff;
+}
+
+.sobre-mvv-list {
+  list-style: none; /* Remove bullets para economizar espaço */
+  padding: 0;
+  margin: 0;
+  font-size: 11px; /* Ainda menor na lista */
 }
 
 /* =======================================================
@@ -792,7 +841,7 @@ section h2 {
   /* Sobre */
   .sobre-wrapper {
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
   }
   .sobre-right {
     justify-content: flex-start;
@@ -800,6 +849,21 @@ section h2 {
   .sobre-box,
   .sobre-photo {
     max-width: 100%;
+  }
+
+  .sobre-photo {
+    height: 340px; /* Proporcional no mobile */
+    order: -1; /* Foto primeiro no mobile */
+  }
+
+  .sobre-mvv {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .sobre-mvv-item {
+    height: 120px;
+    padding: 10px 12px;
   }
 
   /* Integrantes */
@@ -898,6 +962,14 @@ section h2 {
     font-size: 32px;
   }
 
+  .sobre-photo {
+    height: 280px;
+  }
+
+  .sobre-mvv-title {
+    font-size: 13px;
+  }
+
   /* Integrantes */
   .integrante-card {
     padding: 14px 16px;
@@ -949,7 +1021,6 @@ section h2 {
 }
 
 @media (max-width: 480px) {
-
   .midia-slide::before {
     background: rgba(0, 0, 0, 0.6);
   }
