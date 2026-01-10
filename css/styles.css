@@ -423,11 +423,36 @@ main {
 }
 
 .integrante-apelido {
-  font-size: 22px;
+  font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #f5b55f;
+  margin: 0 0 2px 0; /* Mantém espaçamento original */
 }
+
+.integrante-apelido a {
+  display: inline-flex; /* Alinha ícone + texto horizontal */
+  align-items: center;
+  gap: 3px; /* Espaço entre ícone e texto */
+  color: #f5b55f; /* Dourado exato */
+  text-decoration: none;
+  font-size: 15px; /* Tamanho original */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: inherit;
+  transition: all 0.2s ease; /* Suave para hover/focus */
+}
+
+.integrante-apelido a i {
+  font-size: 18px; /* Ícone levemente menor */
+  width: 24px; /* Alinha vertical */
+  text-align: center;
+}
+
+.integrante-apelido a:hover {
+  opacity: 0.8; /* Destaque suave sem mudar cor/layout */
+}
+
 
 .integrante-bio {
   font-size: 14px;
