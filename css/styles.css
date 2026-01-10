@@ -449,10 +449,17 @@ main {
   text-align: center;
 }
 
-.integrante-apelido a:hover {
-  opacity: 0.8; /* Destaque suave sem mudar cor/layout */
+.integrante-apelido a:hover,
+.integrante-apelido a:focus {
+  opacity: 0.85; /* Fade sutil */
+  text-shadow: 0 1px 4px rgba(245, 181, 95, 0.5); /* Brilho dourado no hover */
+  outline: none; /* Remove outline padrão */
 }
 
+.integrante-apelido a:focus-visible {
+  outline: 2px solid #f5b55f;
+  outline-offset: 2px; /* Acessibilidade keyboard */
+}
 
 .integrante-bio {
   font-size: 14px;
@@ -894,11 +901,44 @@ section h2 {
   /* Integrantes */
   .integrantes-grid {
     grid-template-columns: 1fr;
-  }
-  .integrante-card {
-    padding: 16px 18px;
+    gap: 24px;
   }
 
+  .integrante-card {
+    padding: 16px;
+  }
+
+  .integrante-header {
+    flex-direction: column; /* Empilha foto em cima, info embaixo */
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .integrante-foto {
+    width: 140px; /* Foto menor mobile */
+    height: 140px;
+  }
+  
+  .integrante-nome {
+    font-size: 18px; /* Nome menor */
+  }
+  
+  .integrante-apelido a {
+    font-size: 18px; /* Apelido/ícone menor */
+    gap: 6px; /* Gap reduzido */
+    justify-content: center; /* Centraliza ícone+texto */
+  }
+  
+  .integrante-apelido a i {
+    font-size: 18px;
+  }
+  
+  .integrante-bio {
+    font-size: 13px; /* Bio compacta */
+    text-align: center; /* Centraliza texto */
+  }
+  
   /* Eventos empilhados */
   .evento {
     flex-direction: column;
