@@ -554,6 +554,151 @@ main {
   margin-bottom: 0;
 }
 
+/* eventos links - sulcypher */
+.evento-yt-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  justify-content: space-between; /* Esquerda/direita */
+}
+
+.evento-yt-links a {
+  flex: 1; /* Divide espaço igual */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  background: rgba(245, 181, 95, 0.1);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  border: 1px solid rgba(245, 181, 95, 0.3);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap; /* Evita quebra linha */
+}
+
+.evento-yt-links a i {
+  font-size: 15px;
+  color: red;
+}
+
+.evento-yt-links a:hover,
+.evento-yt-links a:focus {
+  background: rgba(245, 181, 95, 0.25);
+  border-color: #f5b55f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 181, 95, 0.4);
+  outline: none;
+}
+
+.evento-yt-links a:focus-visible {
+  outline: 2px solid #f5b55f;
+  outline-offset: 2px;
+}
+
+.evento-ig-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  margin-top: 12px;
+  transition: all 0.2s ease;
+  justify-content: center; /* Centraliza se único */
+}
+
+.evento-ig-link a:hover {
+  background: rgba(245, 181, 95, 0.2);
+  border-color: #f5b55f;
+  border-radius: 5px;
+}
+
+/* evento links - Sul Cypher */
+.evento-yt-multi {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 iguais desktop */
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.evento-yt-multi a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(245, 181, 95, 0.12);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 10px 12px;
+  border: 1px solid rgba(245, 181, 95, 0.4);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.evento-yt-multi a i {
+  font-size: 14px;
+  color: red;
+}
+
+.evento-yt-multi a:hover,
+.evento-yt-multi a:focus {
+  background: rgba(245, 181, 95, 0.3);
+  border-color: #f5b55f;
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(245, 181, 95, 0.4);
+}
+
+.evento-yt-single {
+  display: flex;
+  justify-content: center; /* Centraliza único link */
+  margin-top: 20px;
+}
+
+.evento-yt-single a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245, 181, 95, 0.1);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border: 1px solid rgba(245, 181, 95, 0.3);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.evento-yt-single a i {
+  font-size: 16px;
+  color: red;
+}
+
+.evento-yt-single a:hover,
+.evento-yt-single a:focus {
+  background: rgba(245, 181, 95, 0.2);
+  border-color: #f5b55f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 181, 95, 0.3);
+}
+
 /* Evento alternado (Sul Cypher) */
 .section-eventos .evento:nth-of-type(2) {
   flex-direction: row-reverse;
@@ -919,26 +1064,26 @@ section h2 {
     width: 140px; /* Foto menor mobile */
     height: 140px;
   }
-  
+
   .integrante-nome {
     font-size: 18px; /* Nome menor */
   }
-  
+
   .integrante-apelido a {
     font-size: 18px; /* Apelido/ícone menor */
     gap: 6px; /* Gap reduzido */
     justify-content: center; /* Centraliza ícone+texto */
   }
-  
+
   .integrante-apelido a i {
     font-size: 18px;
   }
-  
+
   .integrante-bio {
     font-size: 13px; /* Bio compacta */
     text-align: center; /* Centraliza texto */
   }
-  
+
   /* Eventos empilhados */
   .evento {
     flex-direction: column;
