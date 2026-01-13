@@ -33,6 +33,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <!-- Swiper JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -669,157 +674,276 @@
       </section>
 
       <!-- Seção Mídia -->
-      <section id="midia" class="section section-midia">
-        <div class="container">
-          <h2 class="midia-title">Presença Midiática</h2>
+      <section id="midia" class="midia-section">
+        <header class="section-header">
+          <h2>Presença Midiática</h2>
+          <p>
+            Registros de premiações em batalhas, espetáculos, mídia e
+            apresentações culturais.
+          </p>
+        </header>
 
-          <div class="midia-carousel">
-            <button class="midia-arrow midia-prev" aria-label="Anterior">
-              &#10094;
-            </button>
-
-            <div class="midia-track-wrapper">
-              <div class="midia-track">
-                <!-- Slide 1 -->
-                <article class="midia-slide is-active">
-                  <img
-                    src="assets/images/midia/midia_01.jpg"
-                    alt="Eventos de dança com Primatas Clan"
-                  />
-                  <h3 class="midia-slide-title">Eventos</h3>
-                  <p class="midia-slide-desc">
-                    1° lugar break the floor - América latina Modalidade 1x1 -
-                    2016
-                  </p>
-                </article>
-
-                <!-- Slide 2 -->
-                <article class="midia-slide">
-                  <img
-                    src="assets/images/midia/midia_02.jpg"
-                    alt="Eventos de dança com Primatas Clan"
-                  />
-                  <h3 class="midia-slide-title">Eventos</h3>
-                  <p class="midia-slide-desc">
-                    1° lugar batalha de estilo modalidade 2x2 - 2016
-                  </p>
-                </article>
-
-                <!-- Repita para os outros slides -->
-                <article class="midia-slide">
-                  <img
-                    src="assets/images/midia/midia_03.jpg"
-                    alt="Eventos de dança com Primatas Clan"
-                  />
-                  <h3 class="midia-slide-title">Eventos</h3>
-                  <p class="midia-slide-desc">
-                    1° lugar batalha da hora modalidade top rock - 2017
-                  </p>
-                </article>
-
-                <article class="midia-slide">
-                  <img
-                    src="assets/images/midia/midia_04.jpg"
-                    alt="Eventos de dança com Primatas Clan"
-                  />
-                  <h3 class="midia-slide-title">Eventos</h3>
-                  <p class="midia-slide-desc">
-                    1° lugar batalha da hora Modalidades 3x3 e footwork, mais
-                    bboy revelação - 2018
-                  </p>
-                </article>
-
-                <article class="midia-slide">
-                  <img
-                    src="assets/images/midia/midia_05.jpg"
-                    alt="Eventos de dança com Primatas Clan"
-                  />
-                  <h3 class="midia-slide-title">Eventos</h3>
-                  <p class="midia-slide-desc">
-                    Semifinalistas break the floor - América Latina Modalidade
-                    4x4 - 2018
-                  </p>
-                </article>
-
-                <article class="midia-slide">
-                  <img
-                    src="assets/images/midia/midia_06.jpg"
-                    alt="Eventos de dança com Primatas Clan"
-                  />
-                  <h3 class="midia-slide-title">Eventos</h3>
-                  <p class="midia-slide-desc">
-                    Semifinalistas break the floor - América Latina modalidade
-                    4x4 - 2021
-                  </p>
-                </article>
-
-                <article class="midia-slide">
-                  <img
-                    src="assets/images/midia/midia_07.jpeg"
-                    alt="Eventos de dança com Primatas Clan"
-                  />
-                  <h3 class="midia-slide-title">Eventos</h3>
-                  <p class="midia-slide-desc">
-                    Participação break the floor - América Latina modalidade 3x3
-                    - 2023
-                  </p>
-                </article>
-
-                <article class="midia-slide">
-                  <img
-                    src="assets/images/midia/midia_08.jpeg"
-                    alt="Eventos de dança com Primatas Clan"
-                  />
-                  <h3 class="midia-slide-title">Eventos</h3>
-                  <p class="midia-slide-desc">
-                    1° lugar intensivo de Breaking modalidade 5x5 - 2024 com
-                    participação ritmos clan
-                  </p>
-                </article>
-
-                <article class="midia-slide">
-                  <img
-                    src="assets/images/midia/midia_09.jpeg"
-                    alt="Eventos de dança com Primatas Clan"
-                  />
-                  <h3 class="midia-slide-title">Eventos</h3>
-                  <p class="midia-slide-desc">
-                    1° lugar batalha da hora Modalidades top rock e footwork -
-                    2025
-                  </p>
-                </article>
-
-                <article class="midia-slide">
-                  <img
-                    src="assets/images/midia/midia_10.jpg"
-                    alt="Eventos de dança com Primatas Clan"
-                  />
-                  <h3 class="midia-slide-title">Espetáculos</h3>
-                  <p class="midia-slide-desc">
-                    Parceiria com Marcella Laurentine Studio de dança e arte
-                    circense - 2017, 2018 e 2021.
-                  </p>
-                </article>
+        <div class="swiper midia-swiper">
+          <div class="swiper-wrapper">
+            <!-- Card 1 -->
+            <article class="swiper-slide midia-card">
+              <img
+                src="assets/images/midia/midia_01.jpg"
+                alt="Premiação de evento"
+              />
+              <div class="midia-info">
+                <span class="midia-tag evento">Evento</span>
+                <h3>
+                  Campeões da 1º Edição Break The floor - América latina
+                  Modalidade 1x1 - 2016
+                </h3>
+                <p>Break The Floor - Flip Produções</p>
               </div>
-            </div>
+            </article>
 
-            <button class="midia-arrow midia-next" aria-label="Próximo">
-              &#10095;
-            </button>
+            <!-- Card 2 -->
+            <article class="swiper-slide midia-card">
+              <img
+                src="assets/images/midia/midia_02.jpg"
+                alt="Premiação de evento"
+              />
+              <div class="midia-info">
+                <span class="midia-tag evento">Evento</span>
+                <h3>1º Lugar na Batalha modalidade Breaking 2x2 - 2016</h3>
+                <p>Batalha de Estilos - Flip Produções</p>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="swiper-slide midia-card">
+              <img
+                src="assets/images/midia/midia_03.jpg"
+                alt="Premiação de evento"
+              />
+              <div class="midia-info">
+                <span class="midia-tag evento">Evento</span>
+                <h3>1° lugar na batalha da hora modalidade top rock - 2017</h3>
+                <p>Batalha da Hora 2017 - Nativos Crew Produções</p>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="swiper-slide midia-card">
+              <img
+                src="assets/images/midia/midia_04.jpg"
+                alt="Premiação de evento"
+              />
+              <div class="midia-info">
+                <span class="midia-tag evento">Evento</span>
+                <h3>
+                  1° lugar batalha da hora Modalidades 3x3 / footwork / bboy
+                  revelação - 2018
+                </h3>
+                <p>Batalha da Hora - Nativos Crew Produções</p>
+              </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="swiper-slide midia-card">
+              <img
+                src="assets/images/midia/midia_05.jpg"
+                alt="Premiação de evento"
+              />
+              <div class="midia-info">
+                <span class="midia-tag evento">Evento</span>
+                <h3>
+                  Semifinalistas da 3º Edição do Break The floor -América
+                  Latina, 2018
+                </h3>
+                <p>Batalha da Hora - Nativos Crew Produções</p>
+              </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="swiper-slide midia-card">
+              <img
+                src="assets/images/midia/midia_06.jpg"
+                alt="Premiação de evento"
+              />
+              <div class="midia-info">
+                <span class="midia-tag evento">Evento</span>
+                <h3>Semifinalistas da 4º Edição do Break The Floor - 2021</h3>
+                <p>Break The Floor - Flip Produções</p>
+              </div>
+            </article>
+
+            <!-- Card 7 -->
+            <article class="swiper-slide midia-card">
+              <img
+                src="assets/images/midia/midia_07.jpeg"
+                alt="Premiação de evento"
+              />
+              <div class="midia-info">
+                <span class="midia-tag evento">Evento</span>
+                <h3>
+                  Participação da 5º Edição break the floor - América Latina
+                  Modalidade 3x3 - 2023
+                </h3>
+                <p>Break The Floor - Flip Produções</p>
+              </div>
+            </article>
+
+            <!-- Card 8 -->
+            <article class="swiper-slide midia-card">
+              <img
+                src="assets/images/midia/midia_08.jpeg"
+                alt="Premiação de evento"
+              />
+              <div class="midia-info">
+                <span class="midia-tag evento">Evento</span>
+                <h3>
+                  1° lugar intensivo de Breaking Modalidade 5x5 - 2024 com
+                  participação ritmos clan
+                </h3>
+                <p>Breaking Intensivo - Artigo 5</p>
+              </div>
+            </article>
+
+            <!-- Card 9 -->
+            <article class="swiper-slide midia-card">
+              <img
+                src="assets/images/midia/midia_09.jpeg"
+                alt="Premiação de evento"
+              />
+              <div class="midia-info">
+                <span class="midia-tag evento">Evento</span>
+                <h3>
+                  1° lugar batalha da hora Modalidades top rock e footwork -
+                  2025
+                </h3>
+                <p>Batalha da Hora - Nativos crew produções</p>
+              </div>
+            </article>
+
+            <!-- Card 10 -->
+            <article class="swiper-slide midia-card">
+              <img
+                src="assets/images/midia/midia_10.jpg"
+                alt="Apresentação em espetáculo"
+              />
+              <div class="midia-info">
+                <span class="midia-tag premio">Espetáculos</span>
+                <h3>
+                  3x Participações em parceria com Marcella Laurentine - 2017,
+                  2019, 2021
+                </h3>
+                <p>Studio de Dança e Núcleo Criativo Circense</p>
+              </div>
+            </article>
+
+            <!-- Card 11 -->
+            <article class="swiper-slide midia-card">
+              <img
+                src="assets/images/midia/midia_11.jpg"
+                alt="Apresentação em espetáculo"
+              />
+              <div class="midia-info">
+                <span class="midia-tag premio">Espetáculos</span>
+                <h3>
+                  Espetáculo - Click no FAD (festival Amazonas de dança) - 2017
+                </h3>
+                <p>Cia Grupo Crew</p>
+              </div>
+            </article>
+
+            <!-- Card 12 -->
+            <article class="swiper-slide midia-card">
+              <img
+                src="assets/images/midia/midia_12.jpg"
+                alt="Apresentação em espetáculo"
+              />
+              <div class="midia-info">
+                <span class="midia-tag premio">Espetáculos</span>
+                <h3>Espetáculo - Além das aparêcias - 2023</h3>
+                <p>Festival de Ritmo e Movimento - UFAM</p>
+              </div>
+            </article>
+
+            <!-- Card 13 -->
+            <article class="swiper-slide midia-card">
+              <img
+                src="assets/images/midia/midia_13.jpg"
+                alt="Participação em clipe musical"
+              />
+              <div class="midia-info">
+                <span class="midia-tag midia">Mídia</span>
+                <h3>
+                  Participação no clipe - inferno, Coletivo 333 ft. Dacota mc,
+                  Karen & o haru (prod. Rul$) - 2023
+                </h3>
+                <p>Video Clipe</p>
+              </div>
+            </article>
+
+            <!-- Card 14 -->
+            <article class="swiper-slide midia-card">
+              <img
+                src="assets/images/midia/midia_15.jpeg"
+                alt="Participação em clipe musical"
+              />
+              <div class="midia-info">
+                <span class="midia-tag midia">Mídia</span>
+                <h3>
+                  Participação no clipe - Do eixo pra cá Dacota ft. Rafa
+                  Militão, Kurt sutil, meridia, rvl$ e Primatas clan - 2024
+                </h3>
+                <p>Video Clipe</p>
+              </div>
+            </article>
+
+            <!-- Card 15 -->
+            <article class="swiper-slide midia-card">
+              <img
+                src="assets/images/midia/midia_14.jpg"
+                alt="Participação em programa de TV"
+              />
+              <div class="midia-info">
+                <span class="midia-tag midia">Mídia</span>
+                <h3>
+                  Participação no programa: 'Caiu na rede mano', Apresentação de
+                  Breaking - 2023
+                </h3>
+                <p>Programa de TV - Band Amazonas</p>
+              </div>
+            </article>
+
+            <!-- Card 16 -->
+            <article class="swiper-slide midia-card">
+              <img
+                src="assets/images/midia/midia_16.jpg"
+                alt="Participação em programa de TV"
+              />
+              <div class="midia-info">
+                <span class="midia-tag midia">Mídia</span>
+                <h3>
+                  Participação em podcast ao convite de Nayara Brilhantes: De olho na cena - 2024
+                </h3>
+                <p>Podcasts - De Olho na Cena</p>
+              </div>
+            </article>
+
+            <!-- Card 17 -->
+            <article class="swiper-slide midia-card">
+              <img
+                src="assets/images/midia/midia_17.jpg"
+                alt="Participação em programa de TV"
+              />
+              <div class="midia-info">
+                <span class="midia-tag apresentacao">Showcases</span>
+                <h3>
+                  Apresentação de breaking 'Código de Rua' na expo favela Amazonas  - 2025
+                </h3>
+                <p>Expofavela 2025</p>
+              </div>
+            </article>
           </div>
 
-          <div class="midia-dots">
-            <button class="midia-dot is-active" aria-label="Slide 1"></button>
-            <button class="midia-dot" aria-label="Slide 2"></button>
-            <button class="midia-dot" aria-label="Slide 3"></button>
-            <button class="midia-dot" aria-label="Slide 4"></button>
-            <button class="midia-dot" aria-label="Slide 5"></button>
-            <button class="midia-dot" aria-label="Slide 6"></button>
-            <button class="midia-dot" aria-label="Slide 7"></button>
-            <button class="midia-dot" aria-label="Slide 8"></button>
-            <button class="midia-dot" aria-label="Slide 9"></button>
-            <button class="midia-dot" aria-label="Slide 10"></button>
-          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </section>
 
@@ -895,6 +1019,8 @@
 
     <!-- Script JS Menu -->
     <script src="js/menu.js"></script>
-    <script src="js/slider.js"></script>
+    <!-- Script JS Slider -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
   </body>
 </html>
