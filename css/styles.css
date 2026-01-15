@@ -374,41 +374,88 @@ main {
 /* =======================================================
    SEÇÃO FAIXA DE DADOS
    ======================================================= */
+
+
 .faixa-metricas {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: stretch;
   gap: 32px;
-  padding: 80px 10%;
-  background: linear-gradient(135deg, #0b0b0b, #000);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 80px 40px;
+  background: linear-gradient(rgba(0,0,0,0.92), rgba(0,0,0,0.92)), 
+    url("../assets/images/eventos/sul_cypher_4.jpg") center/cover no-repeat;
+  color: #aba942;
+  min-height: 400px; 
 }
 
 .metrica-card {
+  flex: 0 1 220px; /* Flex grow/shrink com base ideal 220px */
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  border-radius: 18px;
+  padding: 40px 20px;
   text-align: center;
-  padding: 30px 20px;
-  background: rgba(0, 0, 0, 0.8);
-  border: 1px solid #6a6931;
-  border-radius: 14px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+  border: 1px solid #aba942;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza conteúdo interno vertical/horizontal */
+  height: 240px; /* ALTURA FIXA IDÊNTICA para TODOS */
+  justify-content: center;
+}
+
+.metrica-card:hover {
+  transform: translateY(-8px);
+  border-color: #aba942;
+}
+
+.metrica-card .icone {
+  font-size: 2.8rem;
+  color: #aba942;
+  margin-bottom: 16px;
+  flex-shrink: 0;
 }
 
 .metrica-card .numero {
-  display: block;
-  font-size: 48px;
-  font-weight: 700;
-  color: #6a6931;
-  letter-spacing: 2px;
+  font-size: 52px;
+  font-weight: 800;
+  color: #aba942;
+  line-height: 1;
+  margin: 0;
+  flex-shrink: 0;
 }
 
 .metrica-card .label {
-  display: block;
-  margin-top: 12px;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #fff;
-  opacity: 0.8;
+  color: rgba(255,255,255,0.9);
+  margin-top: 12px;
+  flex-shrink: 0;
+}
+
+.faixa-frase {
+  flex-basis: 100%; /* Ocupa largura total abaixo dos cards */
+  margin-top: 48px; /* Reduzido para mais próximo */
+  text-align: center;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0 20px;
+}
+
+.faixa-frase::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #aba942, transparent);
+  margin: 0 auto 24px;
 }
 
 /* =======================================================
@@ -1018,7 +1065,7 @@ main {
    ======================================================= */
 
 .footer {
-  background: linear-gradient(135deg, #0b0b0b, #000);;
+  background: linear-gradient(135deg, #0b0b0b, #000);
   padding: 24px 6%;
   text-align: center;
   color: #ffffff;
@@ -1046,44 +1093,51 @@ section h2 {
    RESPONSIVIDADE (media queries)
    ======================================================= */
 
-
-
-/* Tablets (até 1024px) */
-@media (max-width: 1024px) {
+/* Responsivo aprimorado */
+/* TABLET - 2 cards por linha */
+@media (max-width: 900px) {
   .faixa-metricas {
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 24px;
-    padding: 60px 8%;
+    padding: 60px 30px;
+    align-items: stretch;
   }
-
-  .metrica-card .numero {
-    font-size: 42px;
-  }
-}
-
-/* Smartphones (até 640px) */
-@media (max-width: 640px) {
-  .faixa-metricas {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 50px 6%;
-  }
-
+  
   .metrica-card {
-    padding: 28px 20px;
+    flex: none; /* Ignora flex, usa width/height fixos */
+    width: 100%;
+    max-width: 320px;
+    height: 200px; /* FIXO e ÚNICO para mobile */
+    padding: 24px 20px;
   }
-
+  
   .metrica-card .numero {
-    font-size: 36px;
+    font-size: 44px;
   }
-
+  
   .metrica-card .label {
-    font-size: 12px;
-    letter-spacing: 1.5px;
+    font-size: 13px;
   }
 }
 
+@media (max-width: 500px) {
+  .metrica-card {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+}
 
+@media (max-width: 480px) {
+  .metrica-card {
+    height: 180px;
+    padding: 20px 16px;
+  }
+  
+  .metrica-card .numero {
+    font-size: 40px;
+  }
+}
 
 /* ---------- até 768px (tablet) ---------- */
 @media (max-width: 768px) {
