@@ -227,7 +227,7 @@ main {
 
 /* Título principal */
 .hero h1 {
-  color: #f5b55f;
+  color: #aba942;
   font-size: 35px;
   font-style: italic;
   letter-spacing: 4px;
@@ -279,7 +279,7 @@ main {
   text-transform: uppercase;
   letter-spacing: 4px;
   margin: 0 0 24px 0;
-  color: #ffffff;
+  color: #aba942;
   font-style: italic;
 }
 
@@ -344,7 +344,7 @@ main {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #f5b55f;
+  color: #aba942;
   margin: 0 0 6px;
   font-style: italic;
   flex-shrink: 0;
@@ -375,106 +375,145 @@ main {
    SEÇÃO INTEGRANTES
    ======================================================= */
 
-.section-integrantes {
-  padding: 60px 0;
+.integrantes-v2 {
+  position: relative;
+  padding: 100px 0;
+  background: url("../assets/images/section/bg_section.png") center/cover
+    no-repeat;
 }
 
-.integrantes-title {
-  font-size: 40px;
+.integrantes-v2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+.integrantes-v2 > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.integrantes-v2-title {
+  font-size: 42px;
+  letter-spacing: 5px;
   text-transform: uppercase;
-  letter-spacing: 4px;
-  margin: 0 0 24px 0;
-  color: #ffffff;
   font-style: italic;
+  color: #aba942;
+  margin-bottom: 60px;
 }
 
-.integrantes-grid {
+/* GRID */
+.integrantes-v2-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 32px 40px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
 }
 
-/* Cartão individual */
-.integrante-card {
-  background: rgba(0, 0, 0, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 20px 22px;
-  color: #ffffff;
-}
-
-.integrante-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 12px;
-}
-
-/* Foto circular */
-.integrante-foto {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+/* CARD */
+.integrante-v2-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  background: linear-gradient(135deg, #0b0b0b, #151515);
+  border: 1px solid #aba942;
+  border-radius: 16px;
   overflow: hidden;
-  border: 3px solid #f5b55f;
-  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(245, 181, 95, 0.1), 0 20px 40px rgba(0, 0, 0, 0.7);
 }
 
-.integrante-foto img {
+/* FOTO */
+.integrante-v2-photo {
+  position: relative;
+}
+
+.integrante-v2-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  filter: contrast(1.05) saturate(1.1);
 }
 
-/* Nome + apelido */
-.integrante-nome {
+.integrante-v2-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset -40px 0 60px rgba(0, 0, 0, 0.85);
+}
+
+/* INFO */
+.integrante-v2-info {
+  padding: 26px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.integrante-v2-info h3 {
   font-size: 22px;
   text-transform: uppercase;
-  margin: 0 0 2px 0;
-}
-
-.integrante-apelido {
-  font-size: 18px;
-  text-transform: uppercase;
+  margin: 0 0 6px;
+  color: #fff;
   letter-spacing: 1px;
-  color: #f5b55f;
-  margin: 0 0 2px 0; /* Mantém espaçamento original */
 }
 
-.integrante-apelido a {
-  display: inline-flex; /* Alinha ícone + texto horizontal */
-  align-items: center;
-  gap: 3px; /* Espaço entre ícone e texto */
-  color: #f5b55f; /* Dourado exato */
-  text-decoration: none;
-  font-size: 15px; /* Tamanho original */
-  text-transform: uppercase;
+.integrante-v2-info .cargo {
+  display: inline-block;
+  background: linear-gradient(90deg, #aba942, #aba942);
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 11px;
   letter-spacing: 1px;
-  font-weight: inherit;
-  transition: all 0.2s ease; /* Suave para hover/focus */
+  text-transform: uppercase;
+  font-weight: 700;
+  width: fit-content;
+  margin-bottom: 14px;
 }
 
-.integrante-apelido a i {
-  font-size: 18px; /* Ícone levemente menor */
-  width: 24px; /* Alinha vertical */
-  text-align: center;
-}
-
-.integrante-apelido a:hover,
-.integrante-apelido a:focus {
-  opacity: 0.85; /* Fade sutil */
-  text-shadow: 0 1px 4px rgba(245, 181, 95, 0.5); /* Brilho dourado no hover */
-  outline: none; /* Remove outline padrão */
-}
-
-.integrante-apelido a:focus-visible {
-  outline: 2px solid #f5b55f;
-  outline-offset: 2px; /* Acessibilidade keyboard */
-}
-
-.integrante-bio {
-  font-size: 14px;
+.integrante-v2-info p {
+  font-size: 13px;
   line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 16px;
+}
+
+.integrante-v2-info .insta {
+  color: #aba942;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.integrante-v2-info .insta:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .integrantes-v2-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .integrante-v2-card {
+    grid-template-columns: 1fr;
+  }
+
+  .integrante-v2-photo {
+    height: 260px;
+    background: #000;
+  }
+
+  .integrante-v2-photo img {
+    object-fit: contain;
+    object-position: center top; /* mantém rosto sempre visível */
+  }
+
+  /* Remove o recorte visual no mobile */
+  .integrante-v2-photo::after {
+    box-shadow: inset 0 -20px 40px rgba(0, 0, 0, 0.5);
+  }
 }
 
 /* =======================================================
@@ -489,7 +528,7 @@ main {
   font-size: 40px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  color: #ffffff;
+  color: #aba942;
   font-style: italic;
   margin-bottom: 24px;
 }
@@ -730,7 +769,7 @@ main {
 .midia-section {
   position: relative;
   padding: 80px 8%;
-  background-image: url("../assets/images/section/bg_section.png"); 
+  background-image: url("../assets/images/section/bg_section.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -757,7 +796,7 @@ main {
 
 .section-header h2 {
   font-size: 2.4rem;
-  color: #f5b55f;
+  color: #aba942;
 }
 
 .midia-title {
@@ -868,12 +907,12 @@ main {
   font-style: italic;
   text-transform: uppercase;
   font-size: 50px;
-  color: #fff;
+  color: #aba942;
   margin-bottom: 0px;
 }
 
 .contato-titulo.apoio {
-  color: #ffffff;
+  color: #aba942;
 }
 
 .contato-apoio {
