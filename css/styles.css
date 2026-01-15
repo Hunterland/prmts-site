@@ -37,7 +37,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.96);
+  background: linear-gradient(135deg, #0b0b0b, #000);
   backdrop-filter: blur(6px);
   z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -369,6 +369,46 @@ main {
   padding: 0;
   margin: 0;
   font-size: 11px; /* Ainda menor na lista */
+}
+
+/* =======================================================
+   SEÇÃO FAIXA DE DADOS
+   ======================================================= */
+.faixa-metricas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #0b0b0b, #000);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.metrica-card {
+  text-align: center;
+  padding: 30px 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #6a6931;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+.metrica-card .numero {
+  display: block;
+  font-size: 48px;
+  font-weight: 700;
+  color: #6a6931;
+  letter-spacing: 2px;
+}
+
+.metrica-card .label {
+  display: block;
+  margin-top: 12px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0.8;
 }
 
 /* =======================================================
@@ -978,7 +1018,7 @@ main {
    ======================================================= */
 
 .footer {
-  background-color: #000000;
+  background: linear-gradient(135deg, #0b0b0b, #000);;
   padding: 24px 6%;
   text-align: center;
   color: #ffffff;
@@ -1005,6 +1045,45 @@ section h2 {
 /* =======================================================
    RESPONSIVIDADE (media queries)
    ======================================================= */
+
+
+
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+  .faixa-metricas {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 60px 8%;
+  }
+
+  .metrica-card .numero {
+    font-size: 42px;
+  }
+}
+
+/* Smartphones (até 640px) */
+@media (max-width: 640px) {
+  .faixa-metricas {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 50px 6%;
+  }
+
+  .metrica-card {
+    padding: 28px 20px;
+  }
+
+  .metrica-card .numero {
+    font-size: 36px;
+  }
+
+  .metrica-card .label {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+}
+
+
 
 /* ---------- até 768px (tablet) ---------- */
 @media (max-width: 768px) {
