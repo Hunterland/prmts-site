@@ -293,7 +293,8 @@ main {
 .sobre-box p {
   font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  line-height: 1.6;
+  letter-spacing: 0.8px;
   margin: 0 0 12px 0;
   color: #ffffff;
 }
@@ -307,11 +308,14 @@ main {
   flex: 1;
   display: flex;
   justify-content: flex-end;
+  padding-top: 85px;
 }
 
 .sobre-photo {
   width: 100%;
-  height: 500px; /* AUMENTA para mostrar grupo completo */
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
@@ -338,6 +342,13 @@ main {
   height: 140px; /* Altura fixa compacta */
   display: flex;
   flex-direction: column;
+  transition: 0.3s ease;
+}
+
+.sobre-mvv-item:hover {
+  transform: translateY(-4px);
+  border-color: #8b8072;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
 .sobre-mvv-title {
@@ -996,6 +1007,25 @@ section h2 {
 /* Responsivo aprimorado */
 /* TABLET - 2 cards por linha */
 @media (max-width: 900px) {
+  .sobre-wrapper {
+    flex-direction: column;
+  }
+
+  .sobre-right {
+    justify-content: center;
+  }
+
+  .sobre-photo {
+    height: 360px;
+  }
+
+  .sobre-mvv {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-title {
+    text-align: center;
+  }
   .faixa-metricas {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1080,6 +1110,7 @@ section h2 {
   }
   .sobre-right {
     justify-content: flex-start;
+    padding-top: 0;
   }
   .sobre-box,
   .sobre-photo {
@@ -1089,6 +1120,8 @@ section h2 {
   .sobre-photo {
     height: 340px; /* Proporcional no mobile */
     order: -1; /* Foto primeiro no mobile */
+    margin-top: 0; /* elimina gap visual */
+    height: 340px;
   }
 
   .sobre-mvv {
