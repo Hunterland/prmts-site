@@ -879,7 +879,7 @@ main {
    CONTATO
    ======================================================= */
 
-.contato-section {
+.section-contato {
   padding: 80px 6%;
   background-image: url("../assets/images/contato/bg-contato.jpg");
   background-size: cover;
@@ -887,88 +887,103 @@ main {
   background-repeat: no-repeat;
 }
 
-/* Remove sublinhado dos links da seção de contato */
-.contato-section a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.contato-container {
-  display: grid;
-  grid-template-columns: 2fr 1.3fr;
-  gap: 80px;
-  align-items: flex-start;
-}
-
-.contato-titulo {
-  font-family: "Poppins", sans-serif;
-  font-style: italic;
-  text-transform: uppercase;
-  font-size: 50px;
-  color: #aba942;
-  margin-bottom: 0px;
-}
-
-.contato-titulo.apoio {
-  color: #aba942;
-}
-
-.contato-apoio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.contato-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.apoio-card {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
+.contato-titulo {
+  font-size: 52px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #aba942;
+  margin-bottom: 10px;
+  font-style: italic;
 }
 
-.apoio-card img {
-  max-width: 75%;
-  border-radius: 50%;
+.contato-subtitulo {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  color: #ccc;
 }
 
-.apoio-instagram {
-  background: #000;
-  color: #fff !important;
-  padding: 10px 18px;
-  border-radius: 6px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.contato-info {
-  display: flex;
-  flex-direction: column;
+.contato-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .contato-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 18px 20px;
   display: flex;
   align-items: center;
   gap: 16px;
-  background: #000;
-  padding: 14px 20px;
-  border-radius: 10px;
-  margin-bottom: 18px;
+  text-align: left;
 }
 
 .contato-item i {
-  font-size: 28px;
-  color: #fff;
+  font-size: 22px;
+  color: #aba942;
+  width: 24px;
 }
 
 .contato-item span {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.contato-item a,
+.contato-item p {
+  font-size: 14px;
   color: #fff;
-  font-weight: 600;
-  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.contato-item a:hover {
+  color: #aba942;
+}
+
+/* Apoio */
+
+.apoio-wrapper {
+  margin-top: 70px;
+}
+
+.apoio-title {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aba942;
+  margin-bottom: 18px;
+}
+
+.apoio-card {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+  padding: 18px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apoio-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
 /* =======================================================
@@ -1035,8 +1050,7 @@ section h2 {
   }
 
   .metrica-card {
-    flex: none; /* Ignora flex, usa width/height fixos */
-    width: 100%;
+    flex: none; 
     max-width: 320px;
     height: 200px; /* FIXO e ÚNICO para mobile */
     padding: 24px 20px;
@@ -1194,14 +1208,18 @@ section h2 {
 
   /* Contato */
   .contato-titulo {
-    font-size: 48px;
+    font-size: 40px;
+  }
+
+  .contato-box {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .apoio-card {
-    width: 180px;
-    height: 180px;
+    width: 130px;
+    height: 130px;
   }
-
   /* Footer */
   .footer-container {
     flex-direction: column;
