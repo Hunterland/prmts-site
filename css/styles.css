@@ -686,7 +686,9 @@ main {
 }
 
 .evento-info h3 {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
   margin-bottom: 10px;
   color: #f5c518;
 }
