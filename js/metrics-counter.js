@@ -1,4 +1,4 @@
-// Metricas da Faixa de dados - Animação dos contadores
+// Métricas da Faixa de dados - Animação dos contadores
 
 const counters = document.querySelectorAll(".numero");
 
@@ -21,15 +21,15 @@ const animateCounter = (counter) => {
   update();
 };
 
-const observer = new IntersectionObserver(entries => {
+const metricsObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const nums = entry.target.querySelectorAll(".numero");
       nums.forEach(animateCounter);
-      observer.disconnect(); // só roda uma vez
+      metricsObserver.disconnect(); // só roda uma vez
     }
   });
 }, { threshold: 0.4 });
 
 const metricsSection = document.querySelector(".faixa-metricas");
-if (metricsSection) observer.observe(metricsSection);
+if (metricsSection) metricsObserver.observe(metricsSection);

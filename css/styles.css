@@ -202,9 +202,10 @@ main {
   z-index: 2;
   margin-right: 48px;
   text-align: right;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.55);
   padding: 32px 40px;
   border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Container do vídeo de fundo */
@@ -400,8 +401,9 @@ main {
 }
 
 .metrica-card {
-  flex: 0 1 220px; /* Flex grow/shrink com base ideal 220px */
+  flex: 0 1 220px;
   background: rgba(0, 0, 0, 0.65);
+  box-shadow: 0 0 0 1px rgba(171, 169, 66, 0.25), 0 12px 30px rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px);
   border-radius: 18px;
   padding: 40px 20px;
@@ -410,8 +412,8 @@ main {
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza conteúdo interno vertical/horizontal */
-  height: 240px; /* ALTURA FIXA IDÊNTICA para TODOS */
+  align-items: center;
+  height: 240px;
   justify-content: center;
 }
 
@@ -529,13 +531,6 @@ main {
   height: 100%;
   object-fit: cover;
   filter: contrast(1.05) saturate(1.1);
-}
-
-.integrante-v2-photo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  box-shadow: inset -40px 0 60px rgba(0, 0, 0, 0.85);
 }
 
 /* INFO */
@@ -926,6 +921,13 @@ main {
   align-items: center;
   gap: 16px;
   text-align: left;
+  transition: .3s ease;
+}
+
+.contato-item:hover {
+  transform: translateY(-4px);
+  border-color: #aba942;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
 .contato-item i {
@@ -959,7 +961,8 @@ main {
 }
 
 .apoio-title {
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #aba942;
@@ -991,22 +994,38 @@ main {
    ======================================================= */
 
 .footer {
-  background: linear-gradient(135deg, #0b0b0b, #000);
-  padding: 24px 6%;
+  background: linear-gradient(180deg, #0A0A0A 0%, #000000 100%);
+  border-top: 1px solid rgba(171, 169, 66, 0.35);
+  padding: 32px 16px 28px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
-  color: #ffffff;
 }
 
 .footer-copy {
-  align-items: center;
+  margin: 0 0 8px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #E6E6E6;
+  text-transform: uppercase;
 }
 
-.footer p {
-  margin: 0;
-  color: #fff;
-  font-size: 14px;
-  letter-spacing: 0.5px;
+.footer-copy::after {
+  content: "";
+  color: #ABA942;
+  font-weight: 600;
 }
+
+.footer-cnpj {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  color: #B5B5B5;
+}
+
 
 /* =======================================================
    DESTAQUE VISUAL PARA TÍTULOS DE SEÇÃO (H2)
@@ -1050,7 +1069,7 @@ section h2 {
   }
 
   .metrica-card {
-    flex: none; 
+    flex: none;
     max-width: 320px;
     height: 200px; /* FIXO e ÚNICO para mobile */
     padding: 24px 20px;
