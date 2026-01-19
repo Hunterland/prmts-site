@@ -75,7 +75,7 @@ body {
   font-size: 13px;
   letter-spacing: 1.4px;
   text-transform: uppercase;
-  color: #E0E0E0;
+  color: #e0e0e0;
   text-decoration: none;
   position: relative;
   padding-bottom: 6px;
@@ -934,7 +934,7 @@ main {
   align-items: center;
   gap: 16px;
   text-align: left;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .contato-item:hover {
@@ -1007,7 +1007,7 @@ main {
    ======================================================= */
 
 .footer {
-  background: linear-gradient(180deg, #0A0A0A 0%, #000000 100%);
+  background: linear-gradient(180deg, #0a0a0a 0%, #000000 100%);
   border-top: 1px solid rgba(171, 169, 66, 0.35);
   padding: 32px 16px 28px;
 }
@@ -1022,13 +1022,13 @@ main {
   margin: 0 0 8px;
   font-size: 13px;
   letter-spacing: 1px;
-  color: #E6E6E6;
+  color: #e6e6e6;
   text-transform: uppercase;
 }
 
 .footer-copy::after {
   content: "";
-  color: #ABA942;
+  color: #aba942;
   font-weight: 600;
 }
 
@@ -1036,9 +1036,39 @@ main {
   margin: 0;
   font-size: 12px;
   letter-spacing: 0.8px;
-  color: #B5B5B5;
+  color: #b5b5b5;
 }
 
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  background: #aba942;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.back-to-top:hover {
+  background: #fff;
+  transform: translateY(-4px);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 /* =======================================================
    DESTAQUE VISUAL PARA TÍTULOS DE SEÇÃO (H2)
