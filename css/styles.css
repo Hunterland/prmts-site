@@ -38,10 +38,34 @@ body {
   top: 0;
   width: 100%;
   z-index: 999;
+  transition: background 0.4s ease, box-shadow 0.4s ease,
+    border-color 0.4s ease, transform 0.4s ease;
+}
+
+/* ESTADO FLUTUANTE (TOPO / HERO) */
+.header.header-floating {
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+/* ESTADO FIXO (SCROLL) */
+.header.header-solid {
   background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(171, 169, 66, 0.25);
 }
+
+.header-floating .nav-links a {
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.header-floating .logo img {
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.6));
+}
+
 
 /* Área interna do menu */
 .menu {
@@ -142,7 +166,9 @@ body {
 /* Espaçamento do conteúdo principal abaixo do header fixo */
 main {
   padding-top: 72px;
+  transition: padding-top 0.4s ease;
 }
+
 
 /* =======================================================
    SEÇÕES GENÉRICAS
@@ -199,6 +225,8 @@ main {
 .hero {
   position: relative;
   min-height: 100vh;
+  margin-top: -72px;
+  padding-top: 72px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
