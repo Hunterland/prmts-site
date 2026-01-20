@@ -1,84 +1,123 @@
-# Primatas Clan – Landing Page
+# Primatas Clan — Site Institucional
 
-Landing page institucional do grupo de dança **Primatas Clan**, coletivo de breaking da cultura hip hop de Manaus (AM).  
-O projeto apresenta o grupo, seus integrantes, eventos realizados, presença midiática e canais de contato.
+![Preview do site](https://raw.githubusercontent.com/Hunterland/prmts-site/main/assets/preview.gif)
 
-> Projeto estático construído em HTML, CSS e JavaScript vanilla, focado em impacto visual e experiência imersiva para o público da cultura urbana.[3][4][5][6]
+## 📌 Descrição do Projeto
 
-***
+Este repositório contém o **site institucional do Primatas Clan**, coletivo de Breaking e cultura urbana fundado em 2014 na Zona Sul de Manaus (AM).
+A página foi desenvolvida com foco em **identidade visual forte**, **narrativa cultural**, **impacto social** e **experiência visual imersiva**, servindo como portfólio oficial do grupo.
 
-## ✨ Features
+O site apresenta a trajetória do clan, seus integrantes, produções culturais, atuação em eventos, presença na mídia e canais de contato institucional.
 
-- Seção *hero* com vídeo em tela cheia destacando o slogan “Uma década de asfalto, suor e impacto!”.[3]
-- Sessão “Sobre o Clan” com texto institucional explicando a história, missão e atuação do grupo na cena hip hop manauara.[3]
-- Grade de **integrantes** com cards individuais (foto, nome, apelido e mini bio) apresentando os b-boys e artistas do coletivo.[6][3]
-- Seção de **produção de eventos** destacando projetos como Circuito Utopia, Sul Cypher e Primatas Battle Kids, com cartazes e descrição detalhada.[6][3]
-- Carrossel de **presença midiática** com conquistas em batalhas, participações em festivais e espetáculos.[5][3]
-- Bloco de **apoio** e **contato** com links diretos para Instagram, e‑mail e WhatsApp do grupo.[3]
-- Layout responsivo com uso de Flexbox e Grid, além de menu mobile com animação de hambúrguer.[4][6]
+---
 
-***
+## 🎯 Objetivos do Site
 
-## 🧱 Tecnologias utilizadas
+* Fortalecer a identidade artística e cultural do Primatas Clan
+* Centralizar informações institucionais e históricas
+* Divulgar produções, eventos e projetos culturais
+* Servir como portfólio para editais, parcerias e imprensa
+* Ampliar a presença digital do grupo
 
-- **HTML5** – estrutura semântica com `header`, `main`, `section`, `article` e `footer` para melhor SEO e acessibilidade.[3]
-- **CSS3** – estilização customizada com:
-  - layout responsivo via Flexbox e CSS Grid  
-  - cabeçalho fixo com efeito de blur  
-  - cards, sobreposições e fundo escuro com textura para reforçar o clima de street/hip hop.[6]
-- **JavaScript (vanilla)** – scripts enxutos para:
-  - menu mobile (abrir/fechar e esconder ao clicar nos links)  
-  - carrossel automático da seção de mídia com setas, dots e pausa ao passar o mouse.[4][5]
-- **Google Fonts** – Poppins e Bebas Neue para reforçar a identidade visual do projeto.[3]
-- **Font Awesome** – ícones sociais (Instagram, WhatsApp, e‑mail) e ícones de navegação.[3]
+---
 
-***
+## 🧱 Estrutura da Página
 
-## 📂 Estrutura de pastas
+O site é composto pelas seguintes seções:
+
+* **Hero / Home**
+  Vídeo de fundo com chamada institucional e posicionamento artístico.
+
+* **Sobre o Clan**
+  História, trajetória, missão, visão e valores.
+
+* **Membros**
+  Cards individuais com imagem, mini bio e link para Instagram.
+
+* **Produção de Eventos**
+  Apresentação de eventos realizados, com descrição, dados e links externos.
+
+* **Na Mídia**
+  Carrossel com registros, matérias e conteúdos audiovisuais.
+
+* **Contato**
+  Informações institucionais, redes sociais, WhatsApp, localização e parceiros.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* **HTML5** — Estrutura semântica
+* **CSS3** — Estilização, responsividade e identidade visual
+* **JavaScript (Vanilla)** — Interações, menu mobile e animações
+* **Intersection Observer API** — Animações de entrada ao scroll
+* **Swiper.js** — Carrosséis e sliders
+* **Font Awesome** — Ícones
+* **Google Fonts** — Tipografia (Poppins e Bebas Neue)
+
+---
+
+## 🎨 Destaques Técnicos
+
+* Layout responsivo (desktop e mobile)
+* Uso de overlays para leitura em fundos visuais
+* Animações suaves de entrada (scroll reveal)
+* Identidade visual alinhada à cultura urbana
+* Estrutura organizada e escalável
+
+---
+
+## 📁 Estrutura de Pastas
 
 ```bash
-PRMTS-SITE/
+/
 ├── index.html
-└── assets/
-    ├── css/
-    │   ├── reset.css
-    │   └── styles.css
-    ├── js/
-    │   ├── menu.js
-    │   └── slider.js
-    ├── images/
-    │   ├── home/
-    │   ├── sobre/
-    │   ├── integrantes/
-    │   ├── eventos/
-    │   ├── midia/
-    │   ├── contato/
-    │   └── logo/
-    └── video/
-        └── prmts-cypher.mp4
+├── css/
+│   ├── reset.css
+│   ├── global.css
+│   └── styles.css
+├── js/
+│   ├── menu.js
+│   ├── swiper.js
+│   └── metrics-counter.js
+├── assets/
+│   ├── images/
+│   ├── video/
+│   └── preview.gif
 ```
 
-Essa organização separa claramente HTML, estilos, scripts, mídias e vídeos, facilitando manutenção e evolução do projeto.[2][5][4][6][3]
+---
 
-***
+## 🖼️ Preview em GIF
 
-## 🚀 Como rodar o projeto localmente
+Para exibir o GIF corretamente no README:
 
-1. Clone o repositório:
+1. Crie um arquivo chamado `preview.gif`
+2. Salve em `assets/preview.gif`
+3. Substitua a URL abaixo conforme seu repositório:
 
-```bash
-git clone https://github.com/seu-usuario/prmts-site.git
-cd prmts-site
+```
+https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPOSITORIO/main/assets/preview.gif
 ```
 
-2. Abra o arquivo `index.html` diretamente no navegador  
-   ou use um servidor simples, por exemplo 'liveserver' diretamente
-   do vscode.
+---
 
+## 🚀 Deploy
 
-## 📌 Próximos passos / ideias de evolução
+O site pode ser publicado facilmente utilizando:
 
-- Otimizar imagens e vídeo para melhorar desempenho em conexões móveis.  
-- Transformar seções como Integrantes e Eventos em dados dinâmicos (JSON) para facilitar atualização do conteúdo.  
-- Adicionar testes de acessibilidade (ex.: Lighthouse) e meta tags avançadas de SEO para melhorar descoberta do grupo em buscas.[4][5][6][3]
+* GitHub Pages
+* Vercel
+* Netlify
 
+---
+
+## 📄 Licença
+
+Este projeto é de uso institucional e artístico do **Primatas Clan**.
+Todos os direitos reservados.
+
+---
+
+© 2026 — Primatas Clan
+Cultura Urbana • Breaking • Produção Cultural
