@@ -249,6 +249,67 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.hero-flicker-shake {
+  position: relative;
+  animation: flicker 4.2s infinite;
+  text-shadow:
+    0 0 6px rgba(171, 169, 66, 0.6),
+    0 0 18px rgba(171, 169, 66, 0.35);
+}
+
+/* Flicker irregular (luminária falhando) */
+@keyframes flicker {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  4% {
+    opacity: 0.3;
+    transform: translate(-1px, 0);
+  }
+
+  6% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  7% {
+    opacity: 0.2;
+    transform: translate(1px, 0);
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  15% {
+    opacity: 0.4;
+    transform: translate(0, -1px);
+  }
+
+  16% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  18% {
+    opacity: 0.25;
+    transform: translate(-1px, 1px);
+  }
+
+  19% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+
 /* Container do vídeo de fundo */
 .video-bg {
   position: absolute;
