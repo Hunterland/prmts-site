@@ -1,6 +1,6 @@
 # Primatas Clan — Site Institucional
 
-![Preview do site](https://raw.githubusercontent.com/Hunterland/prmts-site/main/assets/preview.gif)
+![Preview do site](https://raw.githubusercontent.com/Hunterland/prmts-site/assets/preview.gif)
 
 ## 📌 Descrição do Projeto
 
